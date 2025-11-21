@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Plumbing and Backflow - Expert Plumbing Services in Pueblo, CO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-cta {
+            margin-left: auto;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            padding: 5px;
+        }
+
+        .company-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            background: #dc2626;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+        }
+
+        .cta-button:hover {
+            background: #b91c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.6);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(30, 58, 138, 0.75), rgba(30, 58, 138, 0.75)),
+                        url('van.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .owner-section {
+            background: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .owner-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .owner-photo-wrapper {
+            text-align: center;
+        }
+
+        .owner-photo {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 1rem;
+        }
+
+        .owner-caption {
+            font-size: 1.1rem;
+            color: #1e3a8a;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .owner-text {
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .owner-text h2 {
+            color: #1e3a8a;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .owner-text p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .services {
+            background: #f8fafc;
+            padding: 4rem 2rem;
+        }
+
+        .services-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            text-align: center;
+            color: #1e3a8a;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        .locations {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .locations-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .locations h2 {
+            text-align: center;
+            color: #1e3a8a;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .location-item {
+            background: #f0f9ff;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+
+        .hours-emergency {
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hours-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hours-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .hours-box {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hours-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hours-box p {
+            font-size: 1.2rem;
+        }
+
+        .final-cta {
+            background: #1e3a8a;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .reviews {
+            background: white;
+            padding: 4rem 2rem;
+        }
+
+        .reviews-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reviews h2 {
+            text-align: center;
+            color: #1e3a8a;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .reviews-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #fbbf24;
+        }
+
+        .review-stars {
+            color: #fbbf24;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            color: #333;
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .review-author {
+            color: #1e3a8a;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .owner-content {
+                align-items: center;
+            }
+
+            .owner-text {
+                text-align: center;
+            }
+
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .company-name {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="logo.png" alt="All About Plumbing Logo" class="logo">
+                <span class="company-name">All About Plumbing and Backflow</span>
+            </div>
+            <a href="tel:719-406-7517" class="cta-button">📞 Call Now: 719-406-7517</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Expert Plumbing Services in Pueblo, CO</h1>
+            <p>Professional, Reliable, and Available 24/7 for Emergencies</p>
+            <div class="hero-cta">
+                <a href="tel:719-406-7517" class="cta-button">📞 Call 719-406-7517</a>
+                <a href="#services" class="cta-button" style="background: white; color: #1e3a8a;">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="owner-section">
+        <div class="owner-content">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Crect fill='%23e0e0e0' width='300' height='400'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23666' font-size='24'%3EOwner Photo%3C/text%3E%3C/svg%3E" alt="Owner" class="owner-photo">
+            <div class="owner-text">
+                <h2>Veteran-Owned & Operated</h2>
+                <p>With years of experience serving the Pueblo community and surrounding areas, All About Plumbing and Backflow is your trusted partner for all plumbing needs. We take pride in delivering exceptional service, honest pricing, and professional workmanship on every job. From routine maintenance to emergency repairs, we treat every home and business like our own.</p>
+                <p style="margin-top: 1rem;"><strong>Call us today and experience the difference of working with a local, family-owned business that truly cares about your satisfaction.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="services-content">
+            <h2>Comprehensive Plumbing Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🚰 Sewer Line Replacement</h3>
+                    <p>Expert sewer line repair and replacement using modern techniques and equipment.</p>
+                </div>
+                <div class="service-card">
+                    <h3>✅ Backflow Testing</h3>
+                    <p>Certified backflow testing and prevention to keep your water safe and compliant.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🧹 Drain Cleaning</h3>
+                    <p>Professional drain cleaning services to clear clogs and restore proper flow.</p>
+                </div>
+                <div class="service-card">
+                    <h3>💧 Water Heater Installation</h3>
+                    <p>New water heater installation and replacement for reliable hot water.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🔧 Pipe Repair & Replacement</h3>
+                    <p>Complete pipe repair and replacement services for all types of plumbing systems.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🚿 Fixture Installation</h3>
+                    <p>Professional installation of faucets, toilets, showers, and other fixtures.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🔍 Leak Detection</h3>
+                    <p>Advanced leak detection services to find and fix hidden water leaks.</p>
+                </div>
+                <div class="service-card">
+                    <h3>⚡ Emergency Repairs</h3>
+                    <p>24/7 emergency plumbing services when you need us most.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="tel:719-406-7517" class="cta-button" style="font-size: 1.3rem; padding: 1rem 2rem;">📞 Call 719-406-7517 for Service</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="locations">
+        <div class="locations-content">
+            <h2>Proudly Serving Pueblo & Surrounding Areas</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #555; margin-bottom: 2rem;">We provide expert plumbing services throughout Southern Colorado</p>
+            <div class="locations-grid">
+                <div class="location-item">Pueblo</div>
+                <div class="location-item">Colorado Springs</div>
+                <div class="location-item">La Junta</div>
+                <div class="location-item">Fountain</div>
+                <div class="location-item">Cañon City</div>
+                <div class="location-item">Walsenburg</div>
+                <div class="location-item">Rocky Ford</div>
+                <div class="location-item">Rye</div>
+                <div class="location-item">Fowler</div>
+                <div class="location-item">Manzanola</div>
+                <div class="location-item">Olney Springs</div>
+                <div class="location-item">Pueblo County</div>
+                <div class="location-item">Otero County</div>
+                <div class="location-item">Crowley County</div>
+                <div class="location-item">Fremont County</div>
+                <div class="location-item">Huerfano County</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hours-emergency">
+        <div class="hours-content">
+            <h2>When You Need Us, We're Here</h2>
+            <div class="hours-grid">
+                <div class="hours-box">
+                    <h3>⏰ Regular Hours</h3>
+                    <p>Monday - Friday<br>8:00 AM - 5:00 PM</p>
+                </div>
+                <div class="hours-box">
+                    <h3>🚨 Emergency Service</h3>
+                    <p>24/7 Availability<br>Upon Request</p>
+                </div>
+            </div>
+            <div style="margin-top: 2rem;">
+                <a href="tel:719-406-7517" class="cta-button" style="font-size: 1.3rem; padding: 1rem 2rem; background: white; color: #dc2626;">📞 719-406-7517</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="reviews-content">
+            <h2>What Our Customers Say</h2>
+            <p class="reviews-subtitle">⭐⭐⭐⭐⭐ Trusted by Pueblo and Southern Colorado</p>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Ralph was amazing to work with. We called with a slight emergent situation on Thursday afternoon and he responded immediately. He was at our location first thing Friday morning and we were able to operate as normal while he provided services. Very Friendly and professional, would highly recommend. Thank you!"</p>
+                    <p class="review-author">— Pueblo Dental Services</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Best in town by far! Fast and fair with great work. Highly recommend. Ralph and Miguel were professional and went above and beyond to get our plumbing problems resolved."</p>
+                    <p class="review-author">— Rachel Lawler</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Ralph was outstanding during the week we fought with my insurance company. He constantly kept me updated and had very quick response times. I highly recommend this company."</p>
+                    <p class="review-author">— Colan Cole</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <h2>Ready to Solve Your Plumbing Problems?</h2>
+        <p>Don't wait for a small issue to become a major problem. Call us today!</p>
+        <a href="tel:719-406-7517" class="cta-button" style="font-size: 1.4rem; padding: 1.2rem 2.5rem;">📞 Call 719-406-7517 Now</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 All About Plumbing and Backflow. Licensed & Insured.</p>
+        <p>Serving Pueblo, CO and Surrounding Areas</p>
+        <p style="margin-top: 1rem;">📞 719-406-7517 | 📧 virginiabozz@gmail.com</p>
+    </footer>
+</body>
+</html>

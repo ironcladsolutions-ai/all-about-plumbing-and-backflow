@@ -34,16 +34,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 2rem;
         }
 
         .header-cta {
-            margin-left: auto;
+            flex-shrink: 0;
         }
 
         .logo-section {
             display: flex;
             align-items: center;
             gap: 1rem;
+            flex: 0 0 auto;
         }
 
         .logo {
@@ -83,8 +85,10 @@
         .hero {
             background: linear-gradient(rgba(30, 58, 138, 0.75), rgba(30, 58, 138, 0.75)),
                         url('van.jpg');
-            background-size: cover;
+            background-size: contain;
             background-position: center;
+            background-repeat: no-repeat;
+            background-color: #1e3a8a;
             color: white;
             padding: 6rem 2rem;
             text-align: center;
@@ -366,8 +370,20 @@
 
         @media (max-width: 768px) {
             .header-content {
-                flex-direction: column;
+                flex-direction: row;
+                flex-wrap: wrap;
                 gap: 1rem;
+                justify-content: space-between;
+            }
+
+            .logo-section {
+                flex: 1 1 auto;
+            }
+
+            .header-cta {
+                flex: 0 0 100%;
+                margin-left: 0;
+                text-align: center;
             }
 
             .hero h1 {
@@ -403,7 +419,9 @@
                 <img src="logo.png" alt="All About Plumbing Logo" class="logo">
                 <span class="company-name">All About Plumbing and Backflow</span>
             </div>
-            <a href="tel:719-406-7517" class="cta-button">📞 Call Now: 719-406-7517</a>
+            <div class="header-cta">
+                <a href="tel:719-406-7517" class="cta-button">📞 Call Now: 719-406-7517</a>
+            </div>
         </div>
     </header>
 
@@ -536,6 +554,9 @@
                     <p class="review-text">"Ralph was outstanding during the week we fought with my insurance company. He constantly kept me updated and had very quick response times. I highly recommend this company."</p>
                     <p class="review-author">— Colan Cole</p>
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://www.google.com/maps/place/All+About+Plumbing+and+Backflow/@0,0,8z/data=!4m18!1m9!3m8!1s0x22d905ba2eff7a7b:0xc72cfffdca408b02!2sAll+About+Plumbing+and+Backflow!8m2!3d38.162494!4d-104.7054485!9m1!1b1!16s%2Fg%2F11wwsw4jb3!3m7!1s0x22d905ba2eff7a7b:0xc72cfffdca408b02!8m2!3d38.162494!4d-104.7054485!9m1!1b1!16s%2Fg%2F11wwsw4jb3?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="color: #1e3a8a; font-size: 1.2rem; font-weight: bold; text-decoration: underline;">See for yourself!</a>
             </div>
         </div>
     </section>
